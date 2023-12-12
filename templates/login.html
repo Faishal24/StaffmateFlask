@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="containerLogin">
+    <span class="title">
+        <h1>Login</h1>
+    </span>
+    <div class="contentLogin">
+        <form class="formLogin" action="/">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" placeholder="Admin123" required>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Password123" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

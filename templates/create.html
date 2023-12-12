@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1 style="width: 100%">{% block title %} Add a New User {% endblock %}</h1>
+        <form method="post" class="anotherform">
+            <label for="nama">First Name</label>
+            <input type="text" name="nama"
+                placeholder="First name" required>
+            </input>
+
+            <label for="role">Role</label>
+            <select name="role" id="role" required>
+                <option value="Member">Member</option>
+                <option value="Admin">Admin</option>
+            </select>
+
+            <label for="age">Age</label>
+            <input type="number" name="age"
+                placeholder="Age" required>
+            </input>
+
+            <label for="cars">Pilih Group</label>
+            <select name="group" id="group" required>
+                <option value="Staffmate">Staffmate</option>
+                <option value="Revo">Revo</option>
+            </select>
+    
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+{% endblock %}

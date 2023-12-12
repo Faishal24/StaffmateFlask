@@ -1,0 +1,208 @@
+@import url(https://db.onlinewebfonts.com/c/08db43aa782b75d9bf2e7cf903a95f54?family=Apoka+Regular);
+
+:root {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Apoka Regular;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 2em;
+  align-items: center;
+}
+
+nav .logo {
+  color: #071952;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+.create {
+  color: #071952;
+  padding: 5px 15px;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+}
+
+.create:hover {
+  color: #9dabd7;
+}
+
+.title {
+  text-align: center;
+}
+
+.line {
+  border: 1px solid #c9c9c9; 
+}
+
+.content {
+  margin: 1em 3em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+table,
+td,
+th {
+  text-align: center;
+  border-spacing: 30px 0px;
+}
+
+.name a {
+  color: #00a36f;
+  text-decoration: none;
+}
+
+p {
+  margin: 1em 0em;
+}
+
+th {
+  padding-top: 1em;
+}
+
+.btn {
+  padding: 8px 15px;
+  color: white;
+  font-weight: bold;
+  background-color: #dd2f2f;
+  border-radius: 5px;
+}
+
+.fa {
+  color: #071952;
+  font-size: larger;
+}
+
+.fa-plus {
+  font-size: larger;
+}
+
+/* CREATE */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2em auto;
+  border-radius: 10px;
+  padding: 3em;
+  box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.1);
+}
+
+.container h1 {
+  margin-top: 0;
+}
+
+.anotherform {
+  display: flex;
+  flex-direction: column;
+}
+
+.anotherform label {
+  margin-bottom: 4px;
+}
+
+.anotherform input {
+  padding: 1em .5em;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.anotherform input::placeholder {
+  font-family: Apoka Regular;
+}
+
+.anotherform button {
+  padding: 1em;
+  color: white;
+  background-color: #192655;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+select {
+  padding: 1em .5em;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.usercontainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.containerUser {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2em auto;
+  border-radius: 10px;
+  padding: 3em;
+  box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.1);
+}
+
+
+/* Login */
+
+.formLogin {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLogin label {
+  margin-bottom: 4px;
+}
+
+.formLogin button {
+  margin-top: 1em;
+  padding: 1em;
+  color: white;
+  background-color: #192655;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#username {
+  padding: 1em .5em;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#password {
+  padding: 1em .5em;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.containerLogin {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 15em;
+  margin: 2em auto;
+  border-radius: 10px;
+  padding: 3em 3em 3.5em 3em;
+  box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.1);
+}
+
+.containerLogin h1 {
+  margin: 0 1em 1em 1em;
+}
+
+.content {
+  margin: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}

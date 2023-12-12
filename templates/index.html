@@ -1,0 +1,110 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1 class="title">{% block title %} Staffmate's Member {% endblock %}</h1>
+<div class="content">
+  <table>
+    <tr>
+        <th>ID</th>
+        <th>Nama</th>
+        <th>Usia</th>
+        <th>Role</th>
+        <th>Tanggal Bergabung</th>
+        <th>Ubah</th>
+        <th>Hapus</th>
+    </tr>
+
+    {% for user in users %}
+    {% if user.group == 'Staffmate' %}
+    <div class="student">
+      <tr>
+        <td>
+          <p><b>#{{ user.id }}</b></p>
+        </td>
+        <td>
+          <b>
+            <p class="name">
+              <a href="{{ url_for('user', user_id=user.id)}}">
+                {{ user.nama }}
+              </a>
+            </p>
+          </b>
+        </td>
+        <td><p>{{ user.age }} tahun</p></td>
+        <td><p>{{ user.role }}</p></td>
+        <td><p>{{ user.created_at }}</p></td>
+        <td><a href="{{ url_for('edit', user_id=user.id) }}"><i class="fa fa-pencil"></i></a></td>
+        <td>
+          <form
+            method="POST"
+            action="{{ url_for('delete', user_id=user.id) }}"
+          >
+            <input
+              type="submit"
+              value="Hapus"
+              onclick="return confirm('Hapus akun?')"
+              class="btn"
+            />
+          </form>
+        </td>
+      </tr>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </table>
+</div>
+
+<div class="line"></div>
+<h1 class="title">Other GC's Member</h1>
+<div class="content">
+  <table>
+    <tr>
+        <th>ID</th>
+        <th>Nama</th>
+        <th>Usia</th>
+        <th>Role</th>
+        <th>Tanggal Bergabung</th>
+        <th>Ubah</th>
+        <th>Hapus</th>
+    </tr>
+
+    {% for user in users %}
+    {% if user.group == 'Revo' %}
+    <div class="student">
+      <tr>
+        <td>
+          <p><b>#{{ user.id }}</b></p>
+        </td>
+        <td>
+          <b>
+            <p class="name">
+              <a href="{{ url_for('user', user_id=user.id)}}">
+                {{ user.nama }}
+              </a>
+            </p>
+          </b>
+        </td>
+        <td><p>{{ user.age }} tahun</p></td>
+        <td><p>{{ user.role }}</p></td>
+        <td><p>{{ user.created_at }}</p></td>
+        <td><a href="{{ url_for('edit', user_id=user.id) }}"><i class="fa fa-pencil"></i></a></td>
+        <td>
+          <form
+            method="POST"
+            action="{{ url_for('delete', user_id=user.id) }}"
+          >
+            <input
+              type="submit"
+              value="Hapus"
+              onclick="return confirm('Hapus akun?')"
+              class="btn"
+            />
+          </form>
+        </td>
+      </tr>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </table>
+</div>
+
+{% endblock %}
